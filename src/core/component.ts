@@ -73,6 +73,7 @@ const BaseComponent: VueConstructor<IBaseComponent> = Vue.extend({
     },
 
     updated() {
+        debugger;
         this.$_templatesManager.discover();
 
         this.$_instance.beginUpdate();

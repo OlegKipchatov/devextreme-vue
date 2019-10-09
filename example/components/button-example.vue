@@ -1,32 +1,30 @@
 <template>
-    <example-block title="dxButton">
-        <dx-button text="clik me"/>
-        <dx-button
-            text="I'm colored"
-            :elementAttr="buttonAttrs"
-        />
-        <dx-button
-            text="I'm dangerous"
-            type="danger"
-        />
-    </example-block>
+   <div class="buttons-demo">
+    <dx-check-box v-model="button1" text="Click to change buttons"/>
+    <div>
+      <dx-button template="button1Template" v-if="button1">
+        <template #button1Template="{}">Button 1</template>
+      </dx-button>
+      <dx-button template="button2Template" v-else>
+        <template #button2Template="{}">Button 2</template>
+      </dx-button>
+    </div>
+  </div>
 </template>
 
 <script>
 import ExampleBlock from "./example-block";
 
-import { DxButton } from "../../src";
+import { DxButton, DxCheckBox } from "../../src";
 
 export default {
   components: {
-    ExampleBlock,
+    DxCheckBox,
     DxButton
   },
   data: function() {
       return {
-        buttonAttrs: { 
-            style: 'background-color: #ffc' 
-        }
+       button1: true
       }
   }
 };

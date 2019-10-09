@@ -1,7 +1,7 @@
 <template>
     <div>
         <button-example/>
-        <br/>
+        <!-- <br/>
         <popup-example/>
         <br/>
         <text-box-example/>
@@ -28,7 +28,7 @@
         <br/>
         <accessing-instance-example/>
         <br/>
-        <map-example/>
+        <map-example/> -->
     </div>
 </template>
 
